@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Website</title>
+   <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <header>
+        <div class="video-container">
+            <video autoplay loop muted>
+              <source src="img/video2.mp4" type="video/mp4">
+            </video>
+            <div class="header-content">
+              <h1>Selamat datang di Situs KopiKopi</h1>
+            </div>
+          </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="belanja.html">Belanja</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="fade-in-out1">
+            
+            <p><img src="img/foto1.jpg" alt="" style="float:left;">Bongkar kebiasaan lama, orang Indonesia pilih Top Coffee.</p>
+        </div>
+        <div class="fade-in-out2">
+            <p> <img src="img/foto2.jpg" alt="" style="float:right;">Delizo caffino, kopi instan 3 in 1 pertama dengan kopi asli dan susu asli.</p>
+        </div>
+        <div class="fade-in-out3">
+            <p> <img src="img/foto3.jpg" alt="" style="float:left;">Neo mocachino, ini kopi gue, aromanya manggil, rasa kopinya gokil.</p>
+        </div>
+        <div class="fade-in-out4">
+            <p> <img src="img/foto4.jpg" alt="" style="float:right;">Kopi ABC Coffeetone X You, wujudkan runway-mu dan jadilah inspirasi.</p>
+        </div>
+        <div class="fade-in-out5">
+            <p> <img src="img/foto5.jpg" alt="" style="float:left;">Karena hidup punya banyak rasa, kopi Good Day punya banyak rasa untuk harimu.</p>
+        </div>
+        <div class="fade-in-out6">
+            <p> <img src="img/foto6.jpg" alt="" style="float:right;">Kopi Kapal Api, secangkir semangat untuk inspirasi sukses.</p>
+        </div>
+
+        <div class="pesan">
+            <a href="belanja.html">PESAN SEKARANG</a>
+        </div>
+    </section>
+    <footer>
+        <p>Hak Cipta &copy; 2023 Dandy Royyan Firdaus 220511056</p>
+    </footer>
+</body>
+</html>
+<script>
+    window.addEventListener('scroll', function() {
+        var fadeInOutElements = document.querySelectorAll('.fade-in-out');
+        for (var i = 0; i < fadeInOutElements.length; i++) {
+            var element = fadeInOutElements[i];
+            if (isElementInViewport(element)) {
+                element.classList.add('fade-in');
+            } else {
+                element.classList.remove('fade-in');
+            }
+        }
+    });
+
+    function isElementInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+</script>

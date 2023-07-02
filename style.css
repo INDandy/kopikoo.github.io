@@ -1,0 +1,273 @@
+style
+/* Gaya CSS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+header {
+position: relative;
+height: 30vh; /* Atur tinggi header sesuai kebutuhan */
+overflow: hidden;
+}
+
+.video-container {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+border-radius: 20px;
+}
+
+video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+padding-bottom: 56.25%;
+}
+
+.header-content {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: #ffffff;
+text-shadow:  3px 3px rgba(1, 1, 1, 1.5) ;
+text-align: center;
+z-index: 2;
+
+}
+
+nav {
+    background-color: #ffffff;
+    color: #118AB2;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    padding: 10px;
+    margin: 0 5px;
+    background-color: #141414;
+    color: #ffffff;
+    border-radius: 20px;
+    outline: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav a:hover {
+background-color: #ffffff;
+color: #141414;
+border-radius: 20px;
+}
+
+nav a.active {
+background-color: #ffffff;
+color: #141414;
+border-radius: 20px;
+}
+
+section {
+    padding: 20px;
+    background-color: #073B4C;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #118AB2 ;
+    color: #141414 ;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.h1 {
+margin: 100;
+padding: 100;
+}
+
+.fade-in-out1 {
+opacity: 1;
+
+transition: opacity 0.5s;
+font-family: "San Francisco", Arial, sans-serif; /* Menggunakan font "San Francisco" jika tersedia, jika tidak menggunakan Arial atau font sans-serif */
+font-size: 36px; /* Mengatur ukuran font */
+font-weight: bold; /* Mengatur ketebalan font (normal) */
+font-style: normal; /* Mengatur gaya font (normal) */
+text-align: right;
+margin-bottom: 150px;
+color: #FF6B6B; /* Mengatur warna font */
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) ;
+}
+
+.fade-in-out1 img {
+width: 25%;
+height: 10%;
+display: flex;
+align-items: left;
+margin-left: 5px;
+border-radius: 10px;
+animation: alternate;
+position: relative;
+}
+
+.fade-in-out2 {
+opacity: 1;
+transition: opacity 0.5s;
+font-family: "San Francisco", Arial, sans-serif; /* Menggunakan font "San Francisco" jika tersedia, jika tidak menggunakan Arial atau font sans-serif */
+font-size: 36px; /* Mengatur ukuran font */
+font-weight: bold; /* Mengatur ketebalan font (normal) */
+font-style: normal; /* Mengatur gaya font (normal) */
+text-align: left;
+margin-bottom: 150px;
+color: #FF6B6B; /* Mengatur warna font */
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+}
+
+.fade-in-out2 img {
+width: 25%;
+height: auto;
+display: flex;
+align-items: right;
+margin-left: 5px;
+border-radius: 10px;
+}
+
+.fade-in-out3 {
+    opacity: 1;
+transition: opacity 0.5s;
+font-family: "San Francisco", Arial, sans-serif; /* Menggunakan font "San Francisco" jika tersedia, jika tidak menggunakan Arial atau font sans-serif */
+font-size: 36px; /* Mengatur ukuran font */
+font-weight: bold; /* Mengatur ketebalan font (normal) */
+font-style: normal; /* Mengatur gaya font (normal) */
+text-align: right;
+margin-bottom: 150px;
+color: #FF6B6B; /* Mengatur warna font */
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+}
+
+.fade-in-out3 img {
+width: 25%;
+height: 250px;
+display: flex;
+align-items: left;
+margin-left: 5px;
+border-radius: 10px;
+}
+
+.fade-in-out4 {
+    opacity: 1;
+transition: opacity 0.5s;
+font-family: "San Francisco", Arial, sans-serif; /* Menggunakan font "San Francisco" jika tersedia, jika tidak menggunakan Arial atau font sans-serif */
+font-size: 36px; /* Mengatur ukuran font */
+font-weight: bold; /* Mengatur ketebalan font (normal) */
+font-style: normal; /* Mengatur gaya font (normal) */
+text-align: left;
+margin-bottom: 150px;
+color: #FF6B6B; /* Mengatur warna font */
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+}
+
+.fade-in-out4 img {
+width: 25%;
+height: 250px;
+display: flex;
+align-items: right;
+margin-left: 5px;
+border-radius: 10px;
+}
+
+.fade-in-out5 {
+    opacity: 1;
+transition: opacity 0.5s;
+font-family: "San Francisco", Arial, sans-serif; /* Menggunakan font "San Francisco" jika tersedia, jika tidak menggunakan Arial atau font sans-serif */
+font-size: 36px; /* Mengatur ukuran font */
+font-weight: bold; /* Mengatur ketebalan font (normal) */
+font-style: normal; /* Mengatur gaya font (normal) */
+text-align: right;
+margin-bottom: 150px;
+color: #FF6B6B; /* Mengatur warna font */
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+}
+
+.fade-in-out5 img {
+width: 25%;
+height: 450px;
+display: flex;
+align-items: left;
+margin-left: 5px;
+border-radius: 10px;
+}
+
+.fade-in-out6 {
+    opacity: 1;
+transition: opacity 0.5s;
+font-family: "San Francisco", Arial, sans-serif; /* Menggunakan font "San Francisco" jika tersedia, jika tidak menggunakan Arial atau font sans-serif */
+font-size: 36px; /* Mengatur ukuran font */
+font-weight: bold; /* Mengatur ketebalan font (normal) */
+font-style: normal; /* Mengatur gaya font (normal) */
+text-align: left;
+margin-bottom: 150px;
+color: #FF6B6B; /* Mengatur warna font */
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+}
+
+.fade-in-out6 img {
+width: 25%;
+height: 220px;
+display: flex;
+align-items: right;
+margin-left: 5px;
+border-radius: 10px;
+}
+
+.pesan {
+padding: 5px;
+    margin: 0 5px;
+    background-color: #141414;
+    color: #FFFF00;
+    border-radius: 20px;
+    outline: none;
+    text-align: center;
+    outline:#ffffff;
+    text-decoration: none;
+}
+
+.pesan a {
+padding: 5px;
+    margin: 0 5px;
+    background-color: #141414;
+    color: #FFFF00;
+    border-radius: 20px;
+    outline: none;
+    text-align: center;
+    outline:#ffffff;
+    text-decoration: none;
+}
+
+.pesan a:hover {
+color: #000000;
+background-color: #FFFF00;
+}
+
+.pesan a:active {
+color: #000000;
+background-color: #FFFF00;
+}

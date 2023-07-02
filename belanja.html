@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Berbelanja</title>
+    <link rel="stylesheet" href="stylebelanja.css">
+</head>
+<body>
+    <header>
+        <h1>Pesan Kopi</h1>
+    </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="belanja.html">Belanja</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+        <h3>Menu Kopi</h3>
+    
+        <table>
+            <tr>
+            <td>Kopi Arabika</td>
+            <td>Rp 50.000</td>
+            <td>
+                <button onclick="incrementItem('quantity-arabika')">+</button>
+                <input type="number" id="quantity-arabika" value="0" readonly>
+                <button onclick="decrementItem('quantity-arabika')">-</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Kopi Robusta</td>
+            <td>Rp 60.000</td>
+            <td>
+                <button onclick="incrementItem('quantity-robusta')">+</button>
+                <input type="number" id="quantity-robusta" value="0" readonly>
+                <button onclick="decrementItem('quantity-robusta')">-</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Kopi Musang</td>
+            <td>Rp 40.000</td>
+            <td>
+                <button onclick="incrementItem('quantity-musang')">+</button>
+                <input type="number" id="quantity-musang" value="0" readonly>
+                <button onclick="decrementItem('quantity-musang')">-</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Kopi Kucing</td>
+            <td>Rp 25.000</td>
+            <td>
+                <button onclick="incrementItem('quantity-kucing')">+</button>
+                <input type="number" id="quantity-kucing" value="0" readonly>
+                <button onclick="decrementItem('quantity-kucing')">-</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Kopi Sapi</td>
+            <td>Rp 20.000</td>
+            <td>
+                <button onclick="incrementItem('quantity-sapi')">+</button>
+                <input type="number" id="quantity-sapi" value="0" readonly>
+                <button onclick="decrementItem('quantity-sapi')">-</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Kopi Kopiko</td>
+            <td>Rp 500</td>
+            <td>
+                <button onclick="incrementItem('quantity-kopiko')">+</button>
+                <input type="number" id="quantity-kopiko" value="0" readonly>
+                <button onclick="decrementItem('quantity-kopiko')">-</button>
+            </td>
+        </tr>
+    </table>
+</div>
+    <button id="invoice-button" onclick="generateInvoice()">Buat Invoice</button>
+    <video id="video-background" autoplay loop muted>
+        <source src="img/video4.mp4" type="video/mp4">
+        <!-- Sisipkan sumber video dalam format lain di sini -->
+    </video>    <section>
+</section>
+<footer>
+    <p>Hak Cipta &copy; 2023</p>
+</footer>
+    <script>
+        function incrementItem(quantityId) {
+            var quantityInput = document.getElementById(quantityId);
+            var quantity = parseInt(quantityInput.value);
+            quantityInput.value = quantity + 1;
+        }
+
+        function decrementItem(quantityId) {
+            var quantityInput = document.getElementById(quantityId);
+            var quantity = parseInt(quantityInput.value);
+            if (quantity > 0) {
+                quantityInput.value = quantity - 1;
+            }
+        }
+
+        function generateInvoice() {
+            var arabikaQty = parseInt(document.getElementById("quantity-arabika").value);
+            var robustaQty = parseInt(document.getElementById("quantity-robusta").value);
+            var musangQty = parseInt(document.getElementById("quantity-musang").value);
+            var kucingQty = parseInt(document.getElementById("quantity-kucing").value);
+            var sapiQty = parseInt(document.getElementById("quantity-sapi").value);
+            var kopikoQty = parseInt(document.getElementById("quantity-kopiko").value);
+            
+
+            var arabikaPrice = 50000;
+            var robustaPrice = 60000;
+            var musangPrice = 40000;
+            var kucingPrice = 25000;
+            var sapiPrice = 20000;
+            var kopikoPrice = 500;
+           
+
+            var total = arabikaQty * arabikaPrice + robustaQty * robustaPrice + musangQty * musangPrice + kucingQty * kucingPrice + sapiQty * sapiPrice + kopikoQty * kopikoPrice ;
+           
+            var invoiceText = "Detail Pesanan:\n";
+            if (arabikaQty > 0) {
+                invoiceText += "Kopi Arabika x " + arabikaQty + "\n";
+            }
+            if (robustaQty > 0) {
+                invoiceText += "Kopi Robusta x " + robustaQty + "\n";
+            }
+            if (musangQty > 0) {
+                invoiceText += "Kopi Musang x " + musangQty + "\n";
+            }
+            if (kucingQty > 0) {
+                invoiceText += "Kopi Kucing x " + kucingQty + "\n";
+            }
+            if (sapiQty > 0) {
+                invoiceText += "Kopi Sapi x " + sapiQty + "\n";
+            }
+            if (kopikoQty > 0) {
+                invoiceText += "Kopiko x " + kopikoQty + "\n";
+            }
+            
+
+            invoiceText += "Total Harga: Rp " + total;
+
+            alert(invoiceText);
+        }
+    </script>
+</body>
+</html>
